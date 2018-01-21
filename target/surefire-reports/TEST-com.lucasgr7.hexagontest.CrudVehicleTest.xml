@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.lucasgr7.hexagontest.CrudVehicleTest" time="0.087" tests="4" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.151-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/lucas/estudos/Hexagon/hexagontest"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/lucas/estudos/Hexagon/hexagontest"/>
+    <property name="java.runtime.version" value="1.8.0_151-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.13.0-26-generic"/>
+    <property name="user.home" value="/home/lucas"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="lucas"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="pt"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_151"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="TestSave" classname="com.lucasgr7.hexagontest.CrudVehicleTest" time="0.025"/>
+  <testcase name="TestDelete" classname="com.lucasgr7.hexagontest.CrudVehicleTest" time="0.016">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.lucasgr7.hexagontest.CrudVehicleTest.TestDelete(CrudVehicleTest.java:87)
+</failure>
+    <system-out><![CDATA[2018-01-20 22:54:26.824  INFO 17213 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1b52699c testClass = CrudVehicleTest, testInstance = com.lucasgr7.hexagontest.CrudVehicleTest@340cb97f, testMethod = TestDelete@CrudVehicleTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@26e8ff8c testClass = CrudVehicleTest, locations = '{}', classes = '{class com.lucasgr7.hexagontest.AppStart}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{classpath:test.properties}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@5aa76ad2 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4516af24, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6d3af739, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@15bfd87, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@cd372818, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3d8314f0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3513c84c]; rollback [true]
+Hibernate: select vehicletyp0_.id as id1_0_0_, vehicletyp0_.desc as desc6_0_0_, vehicletyp0_.name as name3_0_0_ from vehicle vehicletyp0_ where vehicletyp0_.id=?
+Hibernate: insert into vehicle (id, desc, name) values (null, ?, ?)
+Hibernate: select vehicle0_.id as id1_0_0_, vehicle0_.description as descript2_0_0_, vehicle0_.name as name3_0_0_, vehicle0_.plate as plate4_0_0_, vehicle0_.vehicle_type as vehicle_5_0_0_ from vehicle vehicle0_ where vehicle0_.id=?
+Hibernate: insert into vehicle (id, description, name, plate, vehicle_type) values (null, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from vehicle vehicle0_
+Hibernate: select vehicle0_.id as id1_0_0_, vehicle0_.description as descript2_0_0_, vehicle0_.name as name3_0_0_, vehicle0_.plate as plate4_0_0_, vehicle0_.vehicle_type as vehicle_5_0_0_ from vehicle vehicle0_ where vehicle0_.id=?
+2018-01-20 22:54:26.837  INFO 17213 --- [           main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@1b52699c testClass = CrudVehicleTest, testInstance = com.lucasgr7.hexagontest.CrudVehicleTest@340cb97f, testMethod = TestDelete@CrudVehicleTest, testException = java.lang.AssertionError, mergedContextConfiguration = [MergedContextConfiguration@26e8ff8c testClass = CrudVehicleTest, locations = '{}', classes = '{class com.lucasgr7.hexagontest.AppStart}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{classpath:test.properties}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@5aa76ad2 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4516af24, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6d3af739, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@15bfd87, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@cd372818, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3d8314f0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+]]></system-out>
+  </testcase>
+  <testcase name="TestSelect" classname="com.lucasgr7.hexagontest.CrudVehicleTest" time="0.014">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.lucasgr7.hexagontest.CrudVehicleTest.TestSelect(CrudVehicleTest.java:95)
+</failure>
+    <system-out><![CDATA[2018-01-20 22:54:26.841  INFO 17213 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1b52699c testClass = CrudVehicleTest, testInstance = com.lucasgr7.hexagontest.CrudVehicleTest@26be9a6, testMethod = TestSelect@CrudVehicleTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@26e8ff8c testClass = CrudVehicleTest, locations = '{}', classes = '{class com.lucasgr7.hexagontest.AppStart}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{classpath:test.properties}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@5aa76ad2 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4516af24, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6d3af739, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@15bfd87, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@cd372818, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3d8314f0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3513c84c]; rollback [true]
+Hibernate: select vehicletyp0_.id as id1_0_0_, vehicletyp0_.desc as desc6_0_0_, vehicletyp0_.name as name3_0_0_ from vehicle vehicletyp0_ where vehicletyp0_.id=?
+Hibernate: insert into vehicle (id, desc, name) values (null, ?, ?)
+Hibernate: select vehicle0_.id as id1_0_0_, vehicle0_.description as descript2_0_0_, vehicle0_.name as name3_0_0_, vehicle0_.plate as plate4_0_0_, vehicle0_.vehicle_type as vehicle_5_0_0_ from vehicle vehicle0_ where vehicle0_.id=?
+Hibernate: insert into vehicle (id, description, name, plate, vehicle_type) values (null, ?, ?, ?, ?)
+Hibernate: select vehicle0_.id as id1_0_, vehicle0_.description as descript2_0_, vehicle0_.name as name3_0_, vehicle0_.plate as plate4_0_, vehicle0_.vehicle_type as vehicle_5_0_ from vehicle vehicle0_ where vehicle0_.name=?
+Hibernate: select vehicletyp0_.id as id1_0_0_, vehicletyp0_.desc as desc6_0_0_, vehicletyp0_.name as name3_0_0_ from vehicle vehicletyp0_ where vehicletyp0_.id=?
+2018-01-20 22:54:26.852  INFO 17213 --- [           main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@1b52699c testClass = CrudVehicleTest, testInstance = com.lucasgr7.hexagontest.CrudVehicleTest@26be9a6, testMethod = TestSelect@CrudVehicleTest, testException = java.lang.AssertionError, mergedContextConfiguration = [MergedContextConfiguration@26e8ff8c testClass = CrudVehicleTest, locations = '{}', classes = '{class com.lucasgr7.hexagontest.AppStart}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{classpath:test.properties}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@5aa76ad2 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4516af24, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6d3af739, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@15bfd87, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@cd372818, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3d8314f0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+]]></system-out>
+  </testcase>
+  <testcase name="TestUpdate" classname="com.lucasgr7.hexagontest.CrudVehicleTest" time="0.032"/>
+</testsuite>

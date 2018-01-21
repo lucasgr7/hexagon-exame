@@ -35,7 +35,17 @@ public class CrudVehicleTypeTest {
 	
 	@Before
 	public void init() {
-		repo.save(new VehicleType(EnumId.savedId, EnumName.savedName, EnumDesc.savedDesc));
+		repo.save(new VehicleType(EnumName.savedName, EnumDesc.savedDesc));
+	}
+	
+	@Test
+	public void TestSearch() {
+		Integer id = repo.findAll().get(0).id;
+		DtoSearchVehicleTypeResponse response = (DtoSearchVehicleTypeResponse) controller.search(id, null).getBody();
+		
+		assertNotNull(response);
+		assertTrue(response.vehiclesTypes.size() > 0);
+		assertTrue(response.vehiclesTypes.stream().findAny().get().id > 0);
 	}
 	
 	@Test
@@ -56,10 +66,11 @@ public class CrudVehicleTypeTest {
 	public void TestUpdate() {
 		long countRegistros = repo.count();
 
-		DtoResponseBase response = (DtoResponseBase) controller.update(new DtoUpdateVehicleTypeRequest(EnumId.savedId, EnumName.changeName, EnumDesc.savedDesc)).getBody();
+		Integer id = repo.findAll().get(0).id;
+		DtoResponseBase response = (DtoResponseBase) controller.update(new DtoUpdateVehicleTypeRequest(id, EnumName.changeName, EnumDesc.savedDesc)).getBody();
 		assertTrue(!response.ExistemErros());
 		
-		VehicleType registro = repo.findOne(EnumId.savedId);
+		VehicleType registro = repo.findOne(id);
 		assertTrue(repo.count() == countRegistros);
 		assertNotNull(registro);
 		assertTrue(registro.description.equals(EnumDesc.savedDesc));
@@ -70,25 +81,16 @@ public class CrudVehicleTypeTest {
 	public void TestDelete() {
 		long countRegistros = repo.count();
 		
-		DtoResponseBase response = (DtoResponseBase) controller.delete(EnumId.savedId).getBody();
+		Integer idDeletado = repo.findAll().get(0).id;
+		
+		DtoResponseBase response = (DtoResponseBase) controller.delete(idDeletado).getBody();
 		
 		assertTrue(!response.ExistemErros());
 		assertTrue(repo.count() == countRegistros -1);
 	}
 	
-	@Test
-	public void TestSearch() {
-		DtoSearchVehicleTypeResponse response = (DtoSearchVehicleTypeResponse) controller.search(EnumId.savedId, null).getBody();
-		
-		assertNotNull(response);
-		assertTrue(response.vehiclesTypes.size() > 0);
-		assertTrue(response.vehiclesTypes.stream().findAny().get().id > 0);
-	}
 	
 	
-	public static class EnumId{
-		public static Integer savedId = 1;
-	}
 	public static class EnumName{
 		private static String name1 = "name1";
 		private static String savedName = "name2";

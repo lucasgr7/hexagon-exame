@@ -39,10 +39,13 @@ public class CrudVehicleTest {
 	@Autowired 
 	private IVehicleTypeRepo typeRepo;
 	
+	private Integer VehicleId = 0;
+	
 	@Before
 	public void init() {
-		typeRepo.save(new VehicleType(EnumVehicleId.salvo1, EnumVehicleTypeName.savedTypeName, EnumVehicleTypeDesc.savedTYpeDesc));
-		repo.save(new Vehicle(EnumId.salvo1, EnumName.salvo1, EnumDesc.salvo1, EnumVehicleId.salvo1, "123-ABCD"));
+		typeRepo.save(new VehicleType(EnumVehicleTypeName.savedTypeName, EnumVehicleTypeDesc.savedTYpeDesc));
+		VehicleId = typeRepo.findAll().get(0).id;
+		repo.save(new Vehicle(EnumName.salvo1, EnumDesc.salvo1, VehicleId, "123-ABCD"));
 	}
 	
 	@Test
@@ -50,7 +53,7 @@ public class CrudVehicleTest {
 		long countRegistros = repo.count();
 		DtoResponseBase response = (DtoResponseBase) controller.save(new DtoSaveVehicleRequest(EnumName.novo1, 
 				EnumDesc.novo1, 
-				EnumVehicleId.salvo1, 
+				VehicleId, 
 				"ABC-1234")).getBody();
 				
 		assertTrue(!response.ExistemErros());
@@ -79,14 +82,6 @@ public class CrudVehicleTest {
 		assertTrue(registroAlterado.plate.equals("AAAA"));
 	}
 
-	@Test
-	public void TestDelete() {
-		long countRegistros = repo.count();
-		
-		DtoResponseBase response = (DtoResponseBase) controller.delete(EnumId.salvo1).getBody();
-		assertTrue(!response.ExistemErros());
-		assertTrue(countRegistros - 1 == repo.count());		
-	}
 
 	@Test
 	public void TestSelect() {
@@ -97,6 +92,17 @@ public class CrudVehicleTest {
 		assertTrue(!response.vehicles.isEmpty());
 		assertTrue(response.vehicles.get(0).name.equals(EnumName.salvo1));
 	}
+
+	@Test
+	public void TestDelete() {
+		long countRegistros = repo.count();
+		
+		Integer idDeletado = repo.findAll().get(0).id;
+		
+		DtoResponseBase response = (DtoResponseBase) controller.delete(idDeletado).getBody();
+		assertTrue(!response.ExistemErros());
+		assertTrue(countRegistros - 1 == repo.count());		
+	}
 	
 	public static class EnumName{
 		public static String novo1 = "namenovo1";
@@ -106,12 +112,6 @@ public class CrudVehicleTest {
 	public static class EnumDesc{
 		public static String novo1 = "novodesc";
 		public static String salvo1 = "salvo1desc";
-	}
-	public static class EnumVehicleId{
-		public static Integer salvo1 = 100;
-	}
-	public static class EnumId{
-		public static Integer salvo1 = 1;
 	}
 	public static class EnumVehicleTypeName{
 		public static String savedTypeName = "t123";
