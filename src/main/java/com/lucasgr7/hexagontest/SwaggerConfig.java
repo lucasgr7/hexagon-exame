@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 
 import com.google.common.base.Predicates;
-import com.lucasgr7.hexagontest.util.ConfigInfo;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -29,14 +28,10 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo apiInfo() {
-		ConfigInfo.Version = getClass().getPackage().getImplementationVersion();
-		if(ConfigInfo.Version==null) {
-			ConfigInfo.Version = "PRE-BUILD";
-		}
 		return new ApiInfoBuilder().title("API da prova Hexagon")
 				.description("Cadastro de Vehicle e Vehicle Type")
 				.contact("Lucas Ribeiro - lucasgr7@gmail.com")
-				.version(ConfigInfo.Version).build();
+				.version("0.0.3").build();
 	}
 	
 }

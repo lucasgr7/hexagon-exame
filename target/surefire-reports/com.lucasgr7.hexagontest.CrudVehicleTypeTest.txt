@@ -1,22 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.lucasgr7.hexagontest.CrudVehicleTypeTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.156 sec <<< FAILURE! - in com.lucasgr7.hexagontest.CrudVehicleTypeTest
-TestDelete(com.lucasgr7.hexagontest.CrudVehicleTypeTest)  Time elapsed: 0.026 sec  <<< FAILURE!
-java.lang.AssertionError: null
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at com.lucasgr7.hexagontest.CrudVehicleTypeTest.TestDelete(CrudVehicleTypeTest.java:75)
-
-TestSearch(com.lucasgr7.hexagontest.CrudVehicleTypeTest)  Time elapsed: 0.008 sec  <<< ERROR!
-java.lang.NullPointerException: null
-	at com.lucasgr7.hexagontest.CrudVehicleTypeTest.TestSearch(CrudVehicleTypeTest.java:84)
-
-TestUpdate(com.lucasgr7.hexagontest.CrudVehicleTypeTest)  Time elapsed: 0.018 sec  <<< FAILURE!
-java.lang.AssertionError: null
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at com.lucasgr7.hexagontest.CrudVehicleTypeTest.TestUpdate(CrudVehicleTypeTest.java:60)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.188 sec - in com.lucasgr7.hexagontest.CrudVehicleTypeTest

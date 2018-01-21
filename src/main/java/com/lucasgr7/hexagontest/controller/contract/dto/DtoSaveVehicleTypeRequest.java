@@ -1,6 +1,7 @@
 package com.lucasgr7.hexagontest.controller.contract.dto;
 
-public class DtoSaveVehicleTypeRequest {
+
+public class DtoSaveVehicleTypeRequest  {
 	
 	public DtoSaveVehicleTypeRequest() {
 		

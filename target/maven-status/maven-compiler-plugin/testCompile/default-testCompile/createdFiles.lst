@@ -1,5 +1,4 @@
 com/lucasgr7/hexagontest/ErrorVehicleTest$EnumName.class
-com/lucasgr7/hexagontest/CrudVehicleTypeTest$EnumId.class
 com/lucasgr7/hexagontest/ErrorVehicleTypeTest$EnumDesc.class
 com/lucasgr7/hexagontest/ErrorVehicleTest$EnumId.class
 com/lucasgr7/hexagontest/ErrorVehicleTest.class
@@ -10,7 +9,6 @@ com/lucasgr7/hexagontest/ErrorVehicleTypeTest$EnumId.class
 com/lucasgr7/hexagontest/CrudVehicleTest$EnumVehicleTypeDesc.class
 com/lucasgr7/hexagontest/CrudVehicleTest$EnumDesc.class
 com/lucasgr7/hexagontest/ErrorVehicleTest$EnumVehicleTypeDesc.class
-com/lucasgr7/hexagontest/CrudVehicleTest$EnumId.class
 com/lucasgr7/hexagontest/CrudVehicleTypeTest.class
 com/lucasgr7/hexagontest/ErrorVehicleTest$EnumVehicleTypeName.class
 com/lucasgr7/hexagontest/CrudVehicleTest.class
@@ -18,5 +16,4 @@ com/lucasgr7/hexagontest/CrudVehicleTest$EnumName.class
 com/lucasgr7/hexagontest/CrudVehicleTest$EnumVehicleTypeName.class
 com/lucasgr7/hexagontest/ErrorVehicleTest$EnumVehicleId.class
 com/lucasgr7/hexagontest/ErrorVehicleTest$EnumDesc.class
-com/lucasgr7/hexagontest/CrudVehicleTest$EnumVehicleId.class
 com/lucasgr7/hexagontest/CrudVehicleTypeTest$EnumName.class

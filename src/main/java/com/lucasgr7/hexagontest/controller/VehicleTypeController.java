@@ -123,5 +123,19 @@ public class VehicleTypeController extends ControllerBase implements IVehicleTyp
 		// TODO Auto-generated method stub
 		return CreateResponse(response);
 	}
+
+	@Override
+	@RequestMapping(value = "all", method = RequestMethod.GET)
+	public ResponseEntity<?> all() {
+		DtoSearchVehicleTypeResponse response = new DtoSearchVehicleTypeResponse();
+		List<VehicleType> tiposVeiculos = repo.findAll();
+		
+		if(hasAny(tiposVeiculos)) {
+			response.vehiclesTypes = tiposVeiculos.stream().map(x -> 
+			new DtoSearchVehicleTypeResponse.VehicleType(x.id, x.name, x.description)).collect(Collectors.toList());
+		}
+		
+		return CreateResponse(response);
+	}
 	
 }

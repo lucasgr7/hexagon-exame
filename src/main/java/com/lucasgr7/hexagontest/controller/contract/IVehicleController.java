@@ -12,4 +12,5 @@ public interface IVehicleController {
 	public  ResponseEntity<?> update(DtoUpdateVehicleRequest dto);
 	public  ResponseEntity<?> delete(Integer id);
 	public  ResponseEntity<?> search(Integer id, String name, String plate, Integer VehicleType);
+	public  ResponseEntity<?> all();
 }

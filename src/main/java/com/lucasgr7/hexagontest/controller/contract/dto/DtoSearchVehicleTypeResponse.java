@@ -1,10 +1,14 @@
 package com.lucasgr7.hexagontest.controller.contract.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.lucasgr7.hexagontest.util.DtoResponseBase;
 
 public class DtoSearchVehicleTypeResponse extends DtoResponseBase {
+	public DtoSearchVehicleTypeResponse() {
+		this.vehiclesTypes = new ArrayList<VehicleType>();
+	}
 	public List<VehicleType> vehiclesTypes;
 	
 	public static class VehicleType{

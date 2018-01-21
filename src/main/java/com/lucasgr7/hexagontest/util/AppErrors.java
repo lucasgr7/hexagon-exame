@@ -27,14 +27,6 @@ public class AppErrors {
 		public HttpStatus statusCode;
 
 		
-
-		TipoErro(final Integer errorCode, final String message, final String moreInfo, HttpStatus status) {
-
-	        this.errorCode = errorCode;
-	        this.message = message;
-	        this.moreInfo = moreInfo;
-	        this.statusCode = status;
-	    }
 		
 		TipoErro(final Integer errorCode, final String message, HttpStatus status) {
 

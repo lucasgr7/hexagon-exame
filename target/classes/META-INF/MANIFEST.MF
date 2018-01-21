@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: hexagontest
+Implementation-Version: 0.0.2
+Built-By: lucas
+Implementation-Vendor-Id: com.lucasgr7
+Build-Jdk: 1.8.0_151
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: com.lucasgr7.hexagontest.AppStart
+

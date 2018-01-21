@@ -47,7 +47,7 @@ public class VehicleController extends ControllerBase implements IVehicleControl
 			response.AdicionarErro(AppErrors.TipoErro.VehicleNameInvalido);
 		if(!isValidString(dto.plate))
 			response.AdicionarErro(AppErrors.TipoErro.VehiclePlateInvalido);
-		if(dto.vehicleType == null && vehicleTypeRepo.findOne(dto.vehicleType) != null)
+		if(dto.vehicleType == null || !vehicleTypeRepo.exists(dto.vehicleType))
 			response.AdicionarErro(AppErrors.TipoErro.VehicleTypeInvalido);
 		
 		if(response.ExistemErros()) {
@@ -164,9 +164,11 @@ public class VehicleController extends ControllerBase implements IVehicleControl
 			if(hasAny(veiculos)) {
 				response.vehicles = new ArrayList<DtoSearchVehicleResponse.Vehicle>();
 				for(Vehicle v : veiculos) {
-					VehicleType vt = vehicleTypeRepo.findOne(v.vehicleType);
-					response.vehicles.add(new DtoSearchVehicleResponse.Vehicle(v.id, v.name, v.desc, v.plate, 
-							new DtoSearchVehicleResponse.VehicleType(vt.id, vt.name, vt.description)));
+					if(v.name != null && v.vehicleType != null) {
+						VehicleType vt = vehicleTypeRepo.findOne(v.vehicleType);
+						response.vehicles.add(new DtoSearchVehicleResponse.Vehicle(v.id, v.name, v.desc, v.plate, 
+								new DtoSearchVehicleResponse.VehicleType(vt.id, vt.name, vt.description)));	
+					}
 				}
 			}else {
 				response.vehicles = new ArrayList<com.lucasgr7.hexagontest.controller.contract.dto.DtoSearchVehicleResponse.Vehicle>();
@@ -175,6 +177,28 @@ public class VehicleController extends ControllerBase implements IVehicleControl
 			response.AdicionarErro(AppErrors.TipoErro.ErroInesperado, ex);
 		}
 		
+		return CreateResponse(response);
+	}
+
+	@Override
+	@RequestMapping(value = "all", method = RequestMethod.GET)
+	public ResponseEntity<?> all() {
+		DtoSearchVehicleResponse response = new DtoSearchVehicleResponse();
+		try {
+			List<Vehicle> veiculos = vehicleRepo.findAll();
+			if(hasAny(veiculos)){
+				for(Vehicle v : veiculos) {
+					if(v.name != null && v.vehicleType != null) {
+						VehicleType vt = vehicleTypeRepo.findOne(v.vehicleType);
+						response.vehicles.add(new DtoSearchVehicleResponse.Vehicle(v.id, v.name, v.desc, v.plate, 
+								new DtoSearchVehicleResponse.VehicleType(vt.id, vt.name, vt.description)));	
+					}
+				}
+			}
+		}
+		catch(Exception ex) {
+			response.AdicionarErro(AppErrors.TipoErro.ErroInesperado, ex);
+		}
 		return CreateResponse(response);
 	}
 	

@@ -12,7 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.lucasgr7.hexagontest.controller.contract.IVehicleTypeController;
 import com.lucasgr7.hexagontest.controller.contract.dto.DtoSaveVehicleTypeRequest;
 import com.lucasgr7.hexagontest.controller.contract.dto.DtoUpdateVehicleTypeRequest;
-import com.lucasgr7.hexagontest.repo.IVehicleTypeRepo;
 import com.lucasgr7.hexagontest.util.AppErrors;
 import com.lucasgr7.hexagontest.util.DtoResponseBase;
 
@@ -24,9 +23,6 @@ public class ErrorVehicleTypeTest {
 
 	@Autowired
 	private IVehicleTypeController controller;
-	
-	@Autowired
-	private IVehicleTypeRepo repo;
 	
 	@Test
 	public void TestSaveNullName() {
@@ -66,11 +62,8 @@ public class ErrorVehicleTypeTest {
 	}
 	public static class EnumName{
 		private static String name1 = "name1";
-		private static String savedName = "name2";
-		private static String changeName = "cName";
 	}
 	public static class EnumDesc{
 		private static String desc1 = "desc1";
-		private static String savedDesc = "desc2";
 	}
 }

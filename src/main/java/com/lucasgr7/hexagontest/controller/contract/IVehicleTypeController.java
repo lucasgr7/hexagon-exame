@@ -9,10 +9,8 @@ import com.lucasgr7.hexagontest.controller.contract.dto.DtoUpdateVehicleTypeRequ
 @Component
 public interface IVehicleTypeController {
 	public ResponseEntity<?> save(DtoSaveVehicleTypeRequest dto);
-	
 	public ResponseEntity<?> update(DtoUpdateVehicleTypeRequest dto);
-	
 	public ResponseEntity<?> delete(Integer id);
-	
 	public ResponseEntity<?> search(Integer id, String name);
+	public ResponseEntity<?> all();
 }

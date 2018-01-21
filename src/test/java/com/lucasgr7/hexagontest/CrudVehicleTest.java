@@ -12,7 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.fasterxml.jackson.databind.ser.std.EnumSerializer;
 import com.lucasgr7.hexagontest.controller.contract.IVehicleController;
 import com.lucasgr7.hexagontest.controller.contract.dto.DtoSaveVehicleRequest;
 import com.lucasgr7.hexagontest.controller.contract.dto.DtoSearchVehicleResponse;
@@ -102,6 +101,13 @@ public class CrudVehicleTest {
 		DtoResponseBase response = (DtoResponseBase) controller.delete(idDeletado).getBody();
 		assertTrue(!response.ExistemErros());
 		assertTrue(countRegistros - 1 == repo.count());		
+	} 
+	@Test
+	public void TestGetAll() {
+		DtoSearchVehicleResponse response = (DtoSearchVehicleResponse) controller.all().getBody();
+		assertNotNull(response);
+		assertTrue(!response.ExistemErros());
+		assertTrue(!response.vehicles.isEmpty());
 	}
 	
 	public static class EnumName{
