@@ -65,7 +65,7 @@ public class VehicleController extends ControllerBase implements IVehicleControl
 
 	@Override
 	@RequestMapping(value = "", method = RequestMethod.PATCH)
-	public ResponseEntity<?> update(DtoUpdateVehicleRequest dto) {
+	public ResponseEntity<?> update(@RequestBody DtoUpdateVehicleRequest dto) {
 		DtoResponseBase response = new DtoResponseBase();
 		
 		if(dto == null) {
