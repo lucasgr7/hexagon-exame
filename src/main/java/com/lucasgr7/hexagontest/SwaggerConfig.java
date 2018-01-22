@@ -31,7 +31,7 @@ public class SwaggerConfig {
 		return new ApiInfoBuilder().title("API da prova Hexagon")
 				.description("Cadastro de Vehicle e Vehicle Type")
 				.contact("Lucas Ribeiro - lucasgr7@gmail.com")
-				.version("0.0.3").build();
+				.version("0.0.4").build();
 	}
 	
 }

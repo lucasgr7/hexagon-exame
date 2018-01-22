@@ -4,7 +4,6 @@ com/lucasgr7/hexagontest/controller/contract/IVehicleTypeController.class
 com/lucasgr7/hexagontest/controller/contract/dto/DtoSearchVehicleResponse.class
 com/lucasgr7/hexagontest/AppStart.class
 com/lucasgr7/hexagontest/controller/contract/dto/DtoSaveVehicleTypeRequest.class
-com/lucasgr7/hexagontest/util/ConfigInfo.class
 com/lucasgr7/hexagontest/util/DtoResponseBase.class
 com/lucasgr7/hexagontest/controller/contract/dto/DtoSearchVehicleResponse$VehicleType.class
 com/lucasgr7/hexagontest/util/AppErrors$TipoErro.class

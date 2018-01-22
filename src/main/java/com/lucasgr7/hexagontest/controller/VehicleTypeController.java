@@ -128,7 +128,7 @@ public class VehicleTypeController extends ControllerBase implements IVehicleTyp
 	@RequestMapping(value = "all", method = RequestMethod.GET)
 	public ResponseEntity<?> all() {
 		DtoSearchVehicleTypeResponse response = new DtoSearchVehicleTypeResponse();
-		List<VehicleType> tiposVeiculos = repo.findAll();
+		List<VehicleType> tiposVeiculos = repo.findAll().stream().filter(x -> x.description != null).collect(Collectors.toList());
 		
 		if(hasAny(tiposVeiculos)) {
 			response.vehiclesTypes = tiposVeiculos.stream().map(x -> 
